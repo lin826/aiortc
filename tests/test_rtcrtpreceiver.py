@@ -405,7 +405,7 @@ class RTCRtpReceiverTest(CodecTestCase):
             # generate some packets
             packets = create_rtp_video_packets(self, codec=VP8_CODEC, frames=129)
 
-            # receive RTP with a with a gap
+            # receive RTP with a gap
             await receiver._handle_rtp_packet(packets[0], arrival_time_ms=0)
             await receiver._handle_rtp_packet(packets[128], arrival_time_ms=0)
 
